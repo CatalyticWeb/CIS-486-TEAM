@@ -9,3 +9,5 @@ Have you ever gotten home from the store with groceries and wished that your new
 ChillAppz is here to save your day!
 
 ### Code and Download information to follow.
+
+Team info can be found [here](https://github.com/CatalyticWeb/CIS-486-TEAM/wiki)
