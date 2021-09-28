@@ -1,5 +1,5 @@
 # CIS-486-TEAM
-## Team Project for CIS 486 by Dr. Barry Cumbie
+## Team <em>Improved Journey</em> for CIS 486 by Dr. Barry Cumbie
 
 # ChillAppz
 ## The Solution to all your Freezer exploding needs!
