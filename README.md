@@ -11,3 +11,6 @@ ChillAppz is here to save your day!
 ### Code and Download information to follow.
 
 Team info can be found [here](https://github.com/CatalyticWeb/CIS-486-TEAM/wiki)
+
+### Product Proposal for ChillAppz
+Product proposal can be found [here](https://github.com/CatalyticWeb/CIS-486-TEAM/wiki/PRODUCT-PROPOSAL)
