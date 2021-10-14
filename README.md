@@ -1,16 +1,32 @@
-# CIS-486-TEAM
-## Team <em>Improved Journey</em> for CIS 486 by Dr. Barry Cumbie
+# heroku-app-three
 
-# ChillAppz
-## The Solution to all your Freezer exploding needs!
-An application to time out the need for quickly refrigerated (frozen) sodas.
-Have you ever gotten home from the store with groceries and wished that your newly bought soda was already cold, prompting you to place a few in the freezer? ... And then forget that it was put there. The result is _explosive_ 🤯!
+## Angular
+Angular is any framework for a webpage needing to be async(loading simultaneously without the page itself refreshing).
+### Angular Facts:
+1. Open Source
+2. Started in 2009
+3. Newest version is version 10
+4. Angular Developers are becoming more popular
 
-ChillAppz is here to save your day!
+Angular Data is automatically synchronized between the model and the view components which is called data binding.
 
-### Code and Download information to follow.
+Simple Angular App:
 
-Team info can be found [here](https://github.com/CatalyticWeb/CIS-486-TEAM/wiki)
+```javascript
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
+  </body>
+</html>
+```
 
-### Product Proposal for ChillAppz
-Product proposal can be found [here](https://github.com/CatalyticWeb/CIS-486-TEAM/wiki/PRODUCT-PROPOSAL)
+
