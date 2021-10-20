@@ -13,4 +13,4 @@ Angular Data is automatically synchronized between the model and the view compon
 Team info can be found [here](https://github.com/CatalyticWeb/CIS-486-TEAM/wiki)
 
 ### Product Proposal for ChillAppz
-Product proposal can be found [here](https://github.com/CatalyticWeb/CIS-486-TEAM/wiki/PRODUCT-PROPOSAL)
+Product proposal can be found [here](https://github.com/CatalyticWeb/Chill-Appz-Startup/wiki/PRODUCT-PROPOSAL:-ChillAppz,-An-Optimal-Refreshment-Solution)
