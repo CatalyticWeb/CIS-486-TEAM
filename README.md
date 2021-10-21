@@ -14,3 +14,6 @@ Team info can be found [here](https://github.com/CatalyticWeb/CIS-486-TEAM/wiki)
 
 ### Product Proposal for ChillAppz
 Product proposal can be found [here](https://github.com/CatalyticWeb/Chill-Appz-Startup/wiki/PRODUCT-PROPOSAL:-ChillAppz,-An-Optimal-Refreshment-Solution)
+
+### Heroku Deployable
+[ChillAppz](https://chill-apps.herokuapp.com/)
