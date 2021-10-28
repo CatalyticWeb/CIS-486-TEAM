@@ -8,7 +8,7 @@ const fs = require('fs');
 app.get('/', function(req, res) {
 
     // res.send('<h3>Hello Node on Heroku</h3><a href="https://github.com/barrycumbie/my-super-cool-awesome-project-app-heroku-node-thing" target="_blank">See the code!</a>');
-    res.sendFile('/angular.html', { root: __dirname });
+    res.sendFile('/Home.html', { root: __dirname });
 });
 
 app.get('/user', function(req, res) {
