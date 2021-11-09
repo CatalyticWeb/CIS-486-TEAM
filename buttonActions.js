@@ -3,6 +3,12 @@ let quantity="unset";
 let startTemp="unset";
 let endTemp="unset";
 
+
+/*$chillData = array('material'=> 'cat',
+                    'quantity'=> 'seven',
+                    'startTemp'=> '',
+                    'endTemp'=> $endTemp');*/
+
 //DOM handlers below for buttons in index
 
 document.getElementById('plastic').onclick = setPlastic();

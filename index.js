@@ -11,11 +11,11 @@ app.get('/', function(req, res) {
 
 });
 
-app.get('/user', function(req, res) {
+/*app.get('/user', function(req, res) {
 
     res.sendFile('/user.JSON', { root: __dirname });
 
-});
+});*/
 
 
 app.get('/about', function(req, res) {
@@ -24,15 +24,15 @@ app.get('/about', function(req, res) {
 
 });
 
-app.get('/file', function(req, res) {
+app.get('/data', function(req, res) {
 
-    fs.readFile('demofile1.html', function(err, data) {
+    fs.readFile('chillData.json', function(err, data) {
         res.writeHead(200, { 'Content-Type': 'text/html' });
         res.write(data);
         return res.end();
     });
 
-    fs.appendFile('demofile1.html', 'Hello content!', function(err) {
+    fs.appendFile('chillData.json', '{"Chilling out nice!": 1}', function(err) {
         if (err) throw err;
         console.log('Saved!');
     });

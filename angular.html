@@ -53,18 +53,18 @@
                     <button id="endCold">Cold</button>
                     <button id="endFrost">Near Frozen</button>
                 </div>
-                <form action="data.php" method="POST">
+                <!--<form action="data.php" method="POST"> -->
                     <input type="hidden" id="material" name="material">
                     <input type="hidden" id="quantity" name="quantity">
                     <input type="hidden" id="startTemp" name="startTemp">
                     <input type="hidden" id="endTemp" name="endTemp">
-                    <input type="submit" value="Go">
+                    <a href='/data'><button type="submit">Go!</button></a>
                 </form>
                 </div>
         </div>
 
 
-    <script>
+    <!--<script>
         window.app = angular.module('hi-angular', []);
         app.controller('MainController', function($scope, $http) {
             $scope.user = null;
@@ -76,7 +76,7 @@
                 });
 
         });
-    </script>
+    </script> -->
 
     <style type="text/css">
         html,
