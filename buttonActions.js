@@ -1,3 +1,8 @@
+let material='unset';
+let quantity="unset";
+let startTemp="unset";
+let endTemp="unset";
+
 //DOM handlers below for buttons in index
 
 document.getElementById('plastic').onclick = setPlastic();
