@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="buttonActions.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 
@@ -21,18 +22,47 @@
                 <h1 id="page-title">Welcome to ChillAppz</h1>
                 <p id="user-car"></p>
                 <div style="width:800px; margin:10;">
-                    <h4>Choose type of container</h4>
+                    <h4>Choose Type of Container</h4>
                 </div>
-               <form action="blahblah.php" method="post" >
-                   <button formaction="plastic.php">Plastic</button>
-                     <button formaction="glass.php">Glass</button>
-                     <button formaction="aluminum.php">Aluminum</button>
-                  </form>
+               <div>
+                   <button id="plastic">Plastic</button>
+                   <button id="glass">Glass</button>
+                   <button id="aluminum">Aluminum</button>
+                </div>
+                <div style="width:800px; margin:10;">
+                    <h4>Choose Container Quantity</h4>
+                </div>
+                <div>
+                    <button id="single">Single</button>
+                    <button id="Sixpack">Sixpack</button>
+                    <button id="Case">Case</button>
+                </div>
+                <div style="width:800px; margin:10;">
+                    <h4>Choose Starting Temperature</h4>
+                </div>
+               <div>
+                    <button id="startWarm">Warm</button>
+                    <button id="startRoom">Room Temperature</button>
+                    <button id="startCool">Cool/Cold</button>
+               </div>
+               <div style="width:800px; margin:10;">
+                <h4>Choose Ending Temperature</h4>
+                </div>
+                <div>
+                    <button id="endCool">Cool</button>
+                    <button id="endCold">Cold</button>
+                    <button id="endFrost">Near Frozen</button>
+                </div>
+                <form action="data.php" method="POST">
+                    <input type="hidden" id="material" name="material">
+                    <input type="hidden" id="quantity" name="quantity">
+                    <input type="hidden" id="startTemp" name="startTemp">
+                    <input type="hidden" id="endTemp" name="endTemp">
+                    <input type="submit" value="Go">
+                </form>
+                </div>
+        </div>
 
-        </div>
-            </div>
-        </div>
-    </div>
 
     <script>
         window.app = angular.module('hi-angular', []);
