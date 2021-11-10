@@ -11,11 +11,11 @@ app.get('/', function(req, res) {
 
 });
 
-/*app.get('/user', function(req, res) {
+app.get('/chill', function(req, res) {
 
-    res.sendFile('/user.JSON', { root: __dirname });
+    res.sendFile('/chillData.JSON', { root: __dirname });
 
-});*/
+});
 
 
 app.get('/about', function(req, res) {
@@ -26,17 +26,17 @@ app.get('/about', function(req, res) {
 
 app.get('/data', function(req, res) {
 
-    fs.readFile('chillData.json', function(err, data) {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        return res.end();
-    });
-
-    fs.appendFile('chillData.json', '{"Chilling out nice!": 1}', function(err) {
+    fs.appendFile('chillData.json', '{"material":"aluminum",\n"quantity":"single",\n"startTemp":"warm",\n"endTemp":"cool"}', function(err) {
         if (err) throw err;
         console.log('Saved!');
     });
-
+    
+    /*fs.readFile('chillData.json', function(err, data) {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write(data);
+        return res.end();
+    });*/
+    res.sendFile('/timer.html', { root: __dirname });
 
 });
 
