@@ -26,7 +26,7 @@ app.get('/about', function(req, res) {
 
 app.get('/data', function(req, res) {
 
-    fs.appendFile('chillData.json', '{"material":"aluminum",\n"quantity":"single",\n"startTemp":"warm",\n"endTemp":"cool"}', function(err) {
+    fs.writeFile('chillData.json', '{"material":"aluminum",\n"quantity":"single",\n"startTemp":"warm",\n"endTemp":"cool"}', function(err) {
         if (err) throw err;
         console.log('Saved!');
     });
