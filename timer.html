@@ -13,7 +13,7 @@
 
 <body ng-app="timer-settings">
     <div ng-controller="MainController">
-        <h2>This is a timer page</h2>
+        <h2 id="timer"></h2>
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <h1 id="page-title">timer-settings</h1>
@@ -40,6 +40,32 @@
                 });
 
         });
+    </script>
+
+    <script>
+        // Set the date we're counting down to
+        var seconds = 300;
+
+        //function to decrement timer
+        function timer() {
+            seconds = seconds - 1;
+            displaySeconds = seconds % 60;
+            minutes = Math.floor(seconds / 60);
+
+            document.getElementById("timer").innerHTML = /*days + "d " + hours + "h "
+            + */minutes + "m " + displaySeconds + "s ";
+
+            if (minutes <= 0) {
+                //counter ended, do something here
+                window.clearInterval(interval);
+                document.getElementById("timer").innerHTML = "CHILLED!";
+                return;
+            }
+        }
+
+        //set interval rate
+        var interval = setInterval(timer, 1000);
+        
     </script>
 
     <style type="text/css">
@@ -73,6 +99,12 @@
             text-align: center;
             margin-top: -20px;
             margin-bottom: 30px;
+        }
+
+        #timer {
+            text-align: center;
+            font-size: 60px;
+            margin-top: 0px;
         }
         
         .margin-auto {
