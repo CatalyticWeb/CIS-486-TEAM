@@ -55,7 +55,7 @@
             document.getElementById("timer").innerHTML = /*days + "d " + hours + "h "
             + */minutes + "m " + displaySeconds + "s ";
 
-            if (minutes <= 0) {
+            if (seconds <= 0) {
                 //counter ended, do something here
                 window.clearInterval(interval);
                 document.getElementById("timer").innerHTML = "CHILLED!";
