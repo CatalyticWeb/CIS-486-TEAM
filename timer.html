@@ -42,8 +42,16 @@
                 .then(response => {
                     console.log(response.data);
                     $scope.chill = response.data;
-                });
+                   
+                    console.log(response.data); 
 
+                });
+                
+                $.each($scope.chill, function(key, value) {
+                    console.log(key, value); 
+                 }); 
+
+                //$(#id).text($scope.chill.material)
         });
     </script>
 
