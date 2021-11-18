@@ -24,6 +24,12 @@ app.get('/about', function(req, res) {
 
 });
 
+app.get('/check', function(req, res) {
+
+    res.sendFile('/chillData.json', { root: __dirname });
+
+});
+
 app.get('/data', function(req, res) {
 
     fs.writeFile('chillData.json', '{"material":"aluminum",\n"quantity":"single",\n"startTemp":"warm",\n"endTemp":"cool"}', function(err) {
