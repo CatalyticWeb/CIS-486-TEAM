@@ -24,6 +24,12 @@ app.get('/about', function(req, res) {
 
 });
 
+app.get('/audio', function(req, res) {
+
+    res.sendFile('/audio/timerEnd.mp3', { root: __dirname });
+
+});
+
 app.get('/check', function(req, res) {
 
     res.sendFile('/chillData.json', { root: __dirname });
