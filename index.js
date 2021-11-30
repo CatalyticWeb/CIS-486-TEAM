@@ -48,7 +48,39 @@ app.get('/data', function(req, res) {
         res.write(data);
         return res.end();
     });*/
-    res.sendFile('/timer.html', { root: __dirname });
+    res.sendFile('/cooltimer.html', { root: __dirname });
+
+});
+
+app.get('/data1', function(req, res) {
+
+    fs.writeFile('chillData.json', '{"material":"aluminum",\n"quantity":"single",\n"startTemp":"warm",\n"endTemp":"cold"}', function(err) {
+        if (err) throw err;
+        console.log('Saved!');
+    });
+    
+    /*fs.readFile('chillData.json', function(err, data) {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write(data);
+        return res.end();
+    });*/
+    res.sendFile('/coldtimer.html', { root: __dirname });
+
+});
+
+app.get('/data2', function(req, res) {
+
+    fs.writeFile('chillData.json', '{"material":"aluminum",\n"quantity":"single",\n"startTemp":"warm",\n"endTemp":"cold"}', function(err) {
+        if (err) throw err;
+        console.log('Saved!');
+    });
+    
+    /*fs.readFile('chillData.json', function(err, data) {
+        res.writeHead(200, { 'Content-Type': 'text/html' });
+        res.write(data);
+        return res.end();
+    });*/
+    res.sendFile('/frozentimer.html', { root: __dirname });
 
 });
 
