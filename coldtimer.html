@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>ChillAppz</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--<script src="buttonActions.js"></script>-->
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body ng-app="timer-settings">
+    <div class="container-fluid" ng-controller="MainController">
+        <div class="row justify-content-center row align-items-center">
+            <h2 id="timer" class="card"></h2>
+        </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 id="page-title">timer-settings</h1>
+
+                <h3>Chilled Drink incoming!</h3>
+                <!--<input ng-model="chill.material">-->
+                <!-- <h3 id="material">Material: {{ chill.material }}</h3>
+                <h3 id="quantity">Quantity: {{ chill.quantity }}</h3>
+                <h3 id="startTemp">Start Temperature: {{ chill.startTemp }}</h3>
+                <h3 id="endTemp">Ending Temperature: {{ chill.endTemp }}</h3> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        window.app = angular.module('timer-settings', []);
+        app.controller('MainController', function($scope, $http) {
+            $scope.chill = null;
+
+            $http.get('/chill')
+                .then(response => {
+                    console.log(response.data);
+                    $scope.chill = response.data;
+                   
+                    console.log(response.data); 
+
+                });
+                
+                $.each($scope.chill, function(key, value) {
+                    console.log(key, value); 
+                 }); 
+
+                //$(#id).text($scope.chill.material)
+        });
+    </script>
+
+    <script>
+        // Set the date we're counting down to
+        var seconds = 90;
+        
+
+        //function to decrement timer
+        function timer() {
+            seconds = seconds - 1;
+            displaySeconds = seconds % 60;
+            minutes = Math.floor(seconds / 60);
+
+            document.getElementById("timer").innerHTML = /*days + "d " + hours + "h "
+            + */minutes + "m " + displaySeconds + "s ";
+
+            if (seconds <= 0) {
+
+                var audio = new Audio('/audio');
+
+                //counter ended, do something here
+                window.clearInterval(interval);
+                document.getElementById("timer").innerHTML = "CHILLED!";
+                audio.play();
+                return;
+            }
+        }
+
+        //set interval rate
+        var interval = setInterval(timer, 1000);
+        
+    </script>
+
+    <style type="text/css">
+        html,
+        body {
+            min-height: 100vh;
+            background-color: #e8e8e8;
+        }
+        
+        /* .container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        } */
+        
+        #page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .table-title {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .table {
+            background-color: #ffffff;
+            box-shadow: 2px 2px 15px -3px rgba(0, 0, 0, 0.75);
+        }
+        
+        #balance-text {
+            text-align: center;
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+
+        #timer {
+            text-align: center;
+            font-size: 60px;
+            padding: 20px;
+            /* margin-top: 0px;
+            height: 150px; */
+            border: solid 1px #000;
+        }
+        
+        .margin-auto {
+            margin: auto;
+            display: block;
+        }
+        
+        .btn-search {
+            margin-bottom: 50px;
+        }
+        
+        .bold {
+            font-weight: 700;
+        }
+        
+        .no-data-text {
+            color: red;
+            text-align: center;
+        }
+    </style>
+
+</body>
+
+</html>
